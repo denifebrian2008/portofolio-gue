@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Bowo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .profile-info {
+            margin-bottom: 30px;
+        }
+        .profile-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .clickable {
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .image-container {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Portofolio Bowo</h1>
+        <div class="profile-info">
+            <p><strong>Nama:</strong> Bowo</p>
+            <p><strong>Hobi:</strong> <span class="clickable" onclick="toggleImage('hobi')">coli</span></p>
+            <div id="hobi" class="image-container">
+                <img src="https://placekitten.com/400/300" alt="Foto Kucing">
+            </div>
+            <p><strong>Jurusan:</strong> <span class="clickable" onclick="toggleImage('jurusan')">teknik</span></p>
+            <div id="jurusan" class="image-container">
+                <img src="https://via.placeholder.com/400x300.png?text=Foto+Mesin" alt="Foto Mesin">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleImage(id) {
+            var imageContainer = document.getElementById(id);
+            if (imageContainer.style.display === "none" || imageContainer.style.display === "") {
+                imageContainer.style.display = "block";
+            } else {
+                imageContainer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
